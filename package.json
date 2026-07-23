@@ -1,0 +1,32 @@
+{
+  "name": "screendoc-mcp",
+  "version": "0.1.0",
+  "description": "Reusable documentation MCP server — creates and incrementally updates versioned, screenshot-driven PDF documentation for any mobile / web / other project.",
+  "type": "module",
+  "bin": {
+    "screendoc-mcp": "dist/server.js"
+  },
+  "main": "dist/server.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx src/server.ts",
+    "start": "node dist/server.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "release:patch": "npm version patch -m \"release: v%s\"",
+    "release:minor": "npm version minor -m \"release: v%s\"",
+    "release:major": "npm version major -m \"release: v%s\"",
+    "release:rc": "npm version prerelease --preid=rc -m \"release candidate: v%s\""
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.0"
+  }
+}
